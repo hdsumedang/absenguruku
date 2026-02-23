@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absen Guru</title>
+
+  <!-- Favicon PNG -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/16MwjcmTkHw4wVn3kKHqbZVj4WTbSRL5I">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100dvh;
+      border: none;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const base =
+        "https://script.google.com/macros/s/AKfycbz7d9VNGpsdlFR6WkvQVkTpASUPu0rA8a8sPuwW6c2W46lRUs7iKoebYIvS3x5I1BsQmg/exec";
+
+      const isAdmin =
+        location.search.includes("admin");
+
+      document.getElementById("app").src =
+        isAdmin ? base + "?page=admin" : base;
+    });
+  </script>
+</head>
+<body>
+
+<iframe
+  id="app"
+  allow="camera; microphone; geolocation; fullscreen">
+</iframe>
+
+</body>
+</html>
+
+
+
